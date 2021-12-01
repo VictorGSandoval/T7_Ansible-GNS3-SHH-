@@ -1,0 +1,17 @@
+- hosts: cisco
+  gather_facts: no
+  tasks:
+    # - name: Show Version
+    #   ios_command:
+    #     commands:
+    #       - show interfaces
+    #   register: results
+
+    # - name: Show results
+    #   debug:
+    #     msg: "{{ results.stdout_lines }}"
+
+    - name: Router configuration
+      ios_config:
+        src: "{{ config_file }}"
+      register: results
