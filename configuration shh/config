@@ -1,0 +1,19 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host Developer
+    HostName 132.226.242.91
+    User ubuntu
+    IdentityFile /home/gova/Descargas/develop.key
+
+Host 192.168.122.11
+    PasswordAuthentication yes
+    HostName 192.168.122.11
+    User devnet
+    KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+    Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+
+Host 192.168.122.12
+    HostName 192.168.122.12
+    User devnet
+    PasswordAuthentication yes
+    KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+    Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
